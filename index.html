@@ -1,35 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Profile card component</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    * {
+      font-family: "Montserrat", sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
+      background-repeat: no-repeat, no-repeat;
+      background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+      background-color: hsl(185, 75%, 39%);
+    }
+
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 6rem 0 0;
+      border-radius: 1rem;
+      background: #fff;  
+    }
+
+    .card img[src="./images/bg-pattern-card.svg"] {
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      top: 0;
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    .grey {
+      color: hsl(0, 0%, 59%);
+    }
+
+    .body {
+      width: 100%;
+      text-align: center;
+      padding: 2rem 0;
+      background: #fff;
+    }
+
+    img[alt="Profile Picture"] {
+      border-radius: 50%;
+      border: 5px solid #fff;
+      margin: 0;
+      z-index: 1;
+    }
+
+    .body p.grey {
+      margin-top: 0.8rem;
+    }
+
+    h2.grey {
+      margin-left: 0.8rem;
+      font-weight: 600;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      border-radius: 0 0 1rem 1rem;
+    }
+
+    .followers,
+    .likes,
+    .photos {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .followers,
+    .photos {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+
+    .followers p,
+    .likes p,
+    .photos p {
+      font-size: 0.8rem;
+      margin-top: 0.4rem;
+    }
+
+    .card hr {
+      width: 100%;
+      border: 1px solid hsl(0, 3%, 85%);
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+    }
+
+    h2 {
+      display: inline-block;
+    }
+
+    h3,
+    p {
+      text-align: center;
+    }
   </style>
 </head>
+
 <body>
-  Victor Crest
-  26
-  London
+  <div class="card">
+    <img src="./images/bg-pattern-card.svg">
+    <img src="./images/image-victor.jpg" alt="Profile Picture">
 
-  80K
-  Followers
+    <div class="body">
+      <h2>Victor Crest</h2>
+      <h2 class="grey">26</h2>
+      <p class="grey">London</p>
+    </div>
 
-  803K
-  Likes
+    <hr>
 
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Pepeworm</a>.
+    <div class="footer">
+      <div class="followers">
+        <h3>80K</h3>
+        <p class="grey">Followers</p>
+      </div>
+
+      <div class="likes">
+        <h3>803K</h3>
+        <p class="grey">Likes</p>
+      </div>
+
+      <div class="photos">
+        <h3>1.4K</h3>
+        <p class="grey">Photos</p>
+      </div>
+    </div>
   </div>
 </body>
+
 </html>
